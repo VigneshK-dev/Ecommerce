@@ -32,7 +32,7 @@ function ProductCard({title,price,rating,img,id}) {
 
 
 
- <Card  className=' card-style mx-3' >
+ <Card  className=' card-style mx-1' >
 
 
 

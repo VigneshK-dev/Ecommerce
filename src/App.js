@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
+
 const Home = React.lazy(()=> import('./Pages/Home'))
 const Products = React.lazy(()=>import('./Pages/Products'))
 const ProductDetails = React.lazy(()=>import('./Pages/ProductDetails')) 
@@ -21,7 +22,7 @@ function App() {
     <div >
      
      <Navbar/> 
-
+ 
     <Suspense fallback={ <div className="d-flex text-dark justify-content-center ">
             <Spinner style={{width: '3rem', height: '3rem'}}/>
              </div>}>

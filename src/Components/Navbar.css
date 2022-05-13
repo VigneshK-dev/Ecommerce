@@ -57,3 +57,102 @@ align-items: center;
 .nav-link:hover{
   color: rgb(0, 81, 255);
 }
+
+
+/*sidebar*/
+
+.sidebaricon{
+  display: none;
+}
+
+
+@media (max-width:991px){
+
+   .sidebaricon{
+     display: block;
+     font-size: 30px;
+     color: rgb(27, 115, 249);
+   }
+
+}
+
+
+
+.sidebar-open{
+  width: 240px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  position: fixed;
+  background-color: rgb(233, 243, 252);
+  top: 0;
+  transform: translateX(0%);
+  transition: 0.2s;
+}
+
+
+
+.sidebar-close{
+  width: 240px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+ transform: translateX(-100%);
+ transition: 0.2s;
+}
+
+
+.sidebarcross{
+ color:rgb(27, 115, 249); 
+ font-size: 25px;
+}
+
+.side-box{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+}
+
+.side-nav{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ border-radius: 5px;
+ padding: 0px 110px 0px 0px ;
+ transition: 0.1s ease-in;
+}
+
+.sideicon{
+  font-size: 20px;
+  color: black;
+  transition: 0.1s ease-in;
+}
+
+
+.side-title{
+  color: black;
+  transition: 0.1s ease-in;
+  text-decoration: none;
+}
+
+
+
+.side-nav:hover{
+ background-color:rgb(51, 122, 229); 
+
+}
+
+
+
+.side-nav:hover .side-title{
+ color: white;
+ }
+
+.side-nav:hover .sideicon{
+  color: white;
+  }

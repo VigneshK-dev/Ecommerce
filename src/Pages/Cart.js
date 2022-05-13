@@ -35,7 +35,7 @@ function Cart() {
      <h3 className='my-3'>MY BAG</h3>
      <Row>
 
-           <Col className="col-9">
+           <Col className="col-lg-9 col-md-12 col-sm-12 my-3">
             <Card style={{backgroundColor:"rgb(233, 243, 252)"}}>
                   
                   <CardBody>
@@ -56,7 +56,7 @@ function Cart() {
             </Card>
            </Col>
          
-           <Col className=" col-3">
+           <Col className="col-lg-3 col-md-6 col-sm-6">
             <Card  style={{backgroundColor:"rgb(233, 243, 252)"}}>
                   
                    <CardBody>

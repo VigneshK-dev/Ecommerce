@@ -10,7 +10,7 @@ function Carousel() {
     <div>
         
 
-  <div className="carousel-inner">
+  <div className="carousel-inner" >
     <div className="carousel-item active ">
       <img src="https://cdn.shopify.com/s/files/1/0130/5041/3114/files/home1_02_4c388999-0b9a-4a73-9fe7-1ca465ec8140_x1024.png?v=1537467468"  className="w-100 banner" alt="..."/>
       <div className="carousel-caption d-none d-md-block">

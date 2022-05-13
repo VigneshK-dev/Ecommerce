@@ -11,7 +11,7 @@ function Login() {
  const [islogin,setlogin]= useState(true)
  const [name,setname] = useState("") 
  const [password,setpassword] = useState("") 
-//  const [message, setMessage] = useState('');
+
 
 
  const handle = (e)=>{
@@ -23,8 +23,7 @@ function Login() {
 //      pass:password
 //   }
 
- }
-
+}
 
 
  const toggle = () =>{
@@ -68,7 +67,7 @@ function Login() {
                 </div>
                 
                 <div className='display-btn'>
-                   {/* {message} */}
+
                 <button type='submit' className='btn login-btn text-light '>
                 
                     Login

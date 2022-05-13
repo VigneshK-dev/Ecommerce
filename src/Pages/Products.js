@@ -121,8 +121,8 @@ const handler = ()=>{
           />)))
 
     return (
-    <Container fluid className='col-11 '>
-       <div className='display-product'>
+    <Container fluid className='col-10'>
+       <div className='display-product '>
        {productdata}
        </div>
        </Container>

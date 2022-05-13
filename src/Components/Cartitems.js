@@ -21,19 +21,19 @@ const dispatch = useDispatch()
 
          <Row>
       
-            <Col className='col-2' >
+            <Col className='col-lg-2 col-md-4 col-sm-12 col-xs-12' >
     
            <div>
            <Link className='link-style text-light'  onClick={()=>dispatch(singleproduct(id))} to={`/Pages/ProductDetails`}> 
-               <img src={img}  alt ="product" style={{width:"100px",height:"120px"}} className='img-fluid' />
-               </Link>
+               <img src={img}  alt ="product" style={{width:"100px",height:"120px"}} className='img-fluid my-2' />
+               </Link> 
             </div>
 
             </Col>
 
 
 
-             <Col className='col-10'>
+             <Col className='col-lg-10 col-md-6 col-sm-12 col-xs-12' >
 
                <button className='float-end btn btn-dark' onClick={()=>dispatch(Delcart(id))} >x</button>
                 <div className='mx-3'>
