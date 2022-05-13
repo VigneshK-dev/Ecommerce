@@ -16,12 +16,12 @@ function Home() {
    
    <Carousel/>
   
-  <Container fluid className='col-12 mt-3 mb-5' >
+  <Container fluid className ='col-12 mt-3 mb-5' >
 
     <Row className='my-3'>
 
 
-           <Col  my-1 lg={6} xs={12} >
+           <Col  className="my-1" lg={6} xs={12} >
            <Link to="/Pages/Products" >
             <div className='org'>
 

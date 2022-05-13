@@ -30,7 +30,7 @@ function Cart() {
   return (
     <div>
 
- <Container fluid className='col-11 mt-3'>
+ <Container fluid className ='col-11 mt-3'>
   
      <h3 className='my-3'>MY BAG</h3>
      <Row>

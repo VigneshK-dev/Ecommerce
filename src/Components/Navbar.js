@@ -33,7 +33,7 @@ function Navbar() {
 <div className="container-fluid">
 <Link to="/Pages/Home" className="navbar-brand text-primary " >Ecommerce</Link>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div className="collapse navbar-collapse" id="navbarSupportedContent">
      <div  className="container col-12">
     
    
@@ -111,10 +111,7 @@ function Navbar() {
 
 
 </div>
-{
-sidebar ? <AiFillCloseCircle onClick={()=>setsidebar(!sidebar)} className='sidebarcross' /> : <BsLayoutSidebarInset onClick={()=>setsidebar(!sidebar)}  className=' sidebaricon'/>
-
-}
+{sidebar ? (<AiFillCloseCircle onClick={()=>setsidebar(!sidebar)} className='sidebarcross' />) : (<BsLayoutSidebarInset onClick={()=>setsidebar(!sidebar)}  className='sidebaricon'/>)}
 
 
 </div>
@@ -122,7 +119,7 @@ sidebar ? <AiFillCloseCircle onClick={()=>setsidebar(!sidebar)} className='sideb
 
 
 
- <div className=   {sidebar ? "sidebar-open" : "sidebar-close"}>
+ <div className=   {sidebar ? ("sidebar-open") : ("sidebar-close")}>
 
       <div className='side-box my-3'> 
 
@@ -131,14 +128,14 @@ sidebar ? <AiFillCloseCircle onClick={()=>setsidebar(!sidebar)} className='sideb
   
         {sidebardata.map((ele,index)=>(
 
-        <div className='side-nav mb-3' key={index}>
+        <div className="side-nav mb-3" key={index}>
 
             <div className='sideicon mx-2 my-2'>
              {ele.icon}
             </div>
 
 
-          <Link to={ele.link} onClick={()=>setsidebar(!sidebar)} className='side-title  my-2 mb-1'>{ele.title}</Link>
+          <Link to={ele.link} onClick={()=>setsidebar(!sidebar)} className='side-title my-2 mb-1'>{ele.title}</Link>
    
 
         </div>

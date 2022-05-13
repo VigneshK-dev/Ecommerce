@@ -23,15 +23,15 @@ function App() {
      
      <Navbar/> 
  
-    <Suspense fallback={ <div className="d-flex text-dark justify-content-center ">
+    <Suspense fallback={ <div className ="d-flex text-dark justify-content-center ">
             <Spinner style={{width: '3rem', height: '3rem'}}/>
              </div>}>
      <Routes>
      <Route path='/' element={<Login/>} />
-        <Route path='/Pages/Home' element={<Home/>} />
-        <Route path='/Pages/Products' element={<Products/>} />
-         <Route path='/Pages/ProductDetails' element={<ProductDetails/>} />
-         <Route path='/Pages/Cart' element={<Cart/>} />
+     <Route path='/Pages/Home' element={<Home/>} />
+     <Route path='/Pages/Products' element={<Products/>} />
+     <Route path='/Pages/ProductDetails' element={<ProductDetails/>} />
+     <Route path='/Pages/Cart' element={<Cart/>} />
      </Routes> 
      
      </Suspense>
