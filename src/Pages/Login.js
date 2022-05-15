@@ -20,7 +20,7 @@ const [showSignup, setShowSignup] = useState(true);
    //    username:name,
    //    pass:password
    // }
-
+   
 }
 
 const toggleSignup =() => {
@@ -70,11 +70,13 @@ return (
                                
                                <div className='display-btn'>
                              
-                               <button type='submit' className='btn login-btn text-light '>
+                               
                                <Link to="/Pages/Home" className="text-light" style={{textDecoration:"none"}}>
+                               <button type='submit' className='btn login-btn text-light '>
                                    Login
-                                   </Link>
+                                  
                                    </button>
+                                   </Link>
                                 
                                 <span className='my-3'>OR</span>
                                 <p className='text-primary' style={{cursor:'pointer'}}  onClick={toggleSignup} > New Member? Create an account</p>

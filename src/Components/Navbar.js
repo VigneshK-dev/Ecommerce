@@ -90,12 +90,10 @@ function Navbar() {
                      </Link>
          
       
-                      <Link to="/">
+                      <Link to="/" >
                          <button  style={{borderRadius:"17px"}}  className='btn mx-3 btn-outline-dark'>
                                  <h6 className='my-1'>
-                                 
-                                     
-                                  
+                                    
                                    Logout
                                    </h6>
                            </button>

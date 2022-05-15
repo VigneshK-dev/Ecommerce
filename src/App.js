@@ -20,8 +20,8 @@ const Login = React.lazy(()=> import("./Pages/Login"))
 function App() {
   return (
     <div >
-     
-     <Navbar/> 
+
+     <Navbar /> 
  
     <Suspense fallback={ <div className ="d-flex text-dark justify-content-center ">
             <Spinner style={{width: '3rem', height: '3rem'}}/>
