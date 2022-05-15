@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import { Container} from 'reactstrap'
- import { Link } from 'react-router-dom'
-//  import axios from 'axios'
+
 
 
 
 function Login() {
 
 const [showSignup, setShowSignup] = useState(true); 
- const [name,setname] = useState("") 
- const [password,setpassword] = useState("") 
+ const [name,setname] = useState("mor_2314") 
+ const [password,setpassword] = useState("83r5^_") 
 
 
 
@@ -21,7 +20,6 @@ const [showSignup, setShowSignup] = useState(true);
    //    username:name,
    //    pass:password
    // }
-   // console.log(data)
 
 }
 
@@ -30,6 +28,11 @@ const toggleSignup =() => {
 }
 
 
+
+
+     
+   
+     
 
 return (
     <div> 
@@ -68,9 +71,9 @@ return (
                                <div className='display-btn'>
                              
                                <button type='submit' className='btn login-btn text-light '>
-                               <Link to="/Pages/Home" className="nav-link text-light ">
+                               {/* <Link to="/Pages/Home" className="text-light" style={{textDecoration:"none"}}> */}
                                    Login
-                                   </Link>
+                                   {/* </Link> */}
                                    </button>
                                 
                                 <span className='my-3'>OR</span>

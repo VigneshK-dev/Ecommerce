@@ -70,7 +70,7 @@ function Navbar() {
           <div className='user '>
 
                     <div className='mx-4'>
-                         <h5 className='text-dark my-2'>HI VIG</h5>
+                         <h5 className='text-dark my-2'>Hi User</h5>
                     </div>
            
 
@@ -90,10 +90,16 @@ function Navbar() {
                      </Link>
          
       
-    
+                      <Link to="/">
                          <button  style={{borderRadius:"17px"}}  className='btn mx-3 btn-outline-dark'>
-                                 <h6 className='my-1'>Logout</h6>
+                                 <h6 className='my-1'>
+                                 
+                                     
+                                  
+                                   Logout
+                                   </h6>
                            </button>
+                           </Link>
 
                            
 
@@ -111,7 +117,7 @@ function Navbar() {
 
 
 </div>
-{sidebar ? (<AiFillCloseCircle onClick={()=>setsidebar(!sidebar)} className='sidebarcross' />) : (<BsLayoutSidebarInset onClick={()=>setsidebar(!sidebar)}  className='sidebaricon'/>)}
+{sidebar ? (<AiFillCloseCircle onClick={()=>setsidebar(!sidebar)} className='sidebarcross ' />) : (<BsLayoutSidebarInset onClick={()=>setsidebar(!sidebar)}  className='sidebaricon'/>)}
 
 
 </div>

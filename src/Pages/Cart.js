@@ -56,7 +56,7 @@ function Cart() {
             </Card>
            </Col>
          
-           <Col className="col-lg-3 col-md-6 col-sm-6">
+           <Col className="col-lg-3 col-md-6 col-sm-6 mt-3">
             <Card  style={{backgroundColor:"rgb(233, 243, 252)"}}>
                   
                    <CardBody>

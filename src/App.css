@@ -122,7 +122,7 @@ height: 13rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     row-gap:20px;
-    column-gap: 10px;
+    column-gap: 20px;
   }
   
   
@@ -134,7 +134,7 @@ height: 13rem;
   display: grid;
   grid-template-columns: repeat(2,1fr);
  row-gap:20px;
- column-gap: 10px;
+ column-gap: 20px;
 
 }
 
@@ -235,7 +235,6 @@ line-height: 1.2;
 }
 
 .display-btn{
-   
  display: flex;
  justify-content: center;
  align-items: center;
@@ -254,3 +253,39 @@ font-weight: 500;
   font-weight: 500;
   box-shadow: 0px 0px 10px 0.5px rgb(223, 222, 222);
 }
+
+@media (max-width:1270px){
+  .login-btn {
+    padding: 12px 70px;
+    background-color:rgb(249,101,44);
+  font-weight: 500;
+  }
+   
+}
+
+
+
+@media (max-width:1000px){
+  .login-card{
+    display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  }
+  .login-btn {
+    padding: 12px 110px;
+    background-color:rgb(249,101,44);
+  font-weight: 500;
+  }
+
+  
+}
+
+@media (max-width:650px){
+  .login-btn {
+    padding: 12px 50px;
+    background-color:rgb(249,101,44);
+  font-weight: 500;
+  }
+   
+}
+

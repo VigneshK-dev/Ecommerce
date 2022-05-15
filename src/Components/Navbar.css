@@ -111,6 +111,16 @@ align-items: center;
  font-size: 25px;
 }
 
+
+@media (min-width:992px) {
+  .sidebarcross{
+    display: none;
+   }
+
+}
+
+
+
 .side-box{
   display: flex;
   justify-content: flex-start;
