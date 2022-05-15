@@ -1,14 +1,14 @@
 import React, {  useState } from 'react'
 import { Container} from 'reactstrap'
-
+import { Link } from 'react-router-dom';
 
 
 
 function Login() {
 
 const [showSignup, setShowSignup] = useState(true); 
- const [name,setname] = useState("mor_2314") 
- const [password,setpassword] = useState("83r5^_") 
+ const [name,setname] = useState("") 
+ const [password,setpassword] = useState("") 
 
 
 
@@ -71,9 +71,9 @@ return (
                                <div className='display-btn'>
                              
                                <button type='submit' className='btn login-btn text-light '>
-                               {/* <Link to="/Pages/Home" className="text-light" style={{textDecoration:"none"}}> */}
+                               <Link to="/Pages/Home" className="text-light" style={{textDecoration:"none"}}>
                                    Login
-                                   {/* </Link> */}
+                                   </Link>
                                    </button>
                                 
                                 <span className='my-3'>OR</span>

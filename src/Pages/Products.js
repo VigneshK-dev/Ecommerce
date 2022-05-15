@@ -1,6 +1,6 @@
 import { Container, Spinner } from 'reactstrap'
 import ProductCard from '../Components/ProductCard'
-import { useState,useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { getproduct} from '../Reducers'
@@ -28,7 +28,11 @@ const dispatch = useDispatch()
 
 useEffect(()=>{
    Fetchdata()
+   // eslint-disable-next-line react-hooks/exhaustive-deps
 },[])
+
+
+
 
 const filter = (cat)=>{
   const fil = data.filter(ele=>(ele.category === cat))
