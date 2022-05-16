@@ -18,6 +18,10 @@ const Cart = React.lazy(()=>import('./Pages/Cart'))
 const Login = React.lazy(()=> import("./Pages/Login"))
 
 function App() {
+
+ 
+
+
   return (
     <div >
 
@@ -27,7 +31,7 @@ function App() {
             <Spinner style={{width: '3rem', height: '3rem'}}/>
              </div>}>
      <Routes>
-     <Route path='/' element={<Login/>} />
+     <Route path='/' element={<Login />} />
      <Route path='/Pages/Home' element={<Home/>} />
      <Route path='/Pages/Products' element={<Products/>} />
      <Route path='/Pages/ProductDetails' element={<ProductDetails/>} />

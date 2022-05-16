@@ -1,7 +1,8 @@
 import React, {  useState } from 'react'
 import { Container} from 'reactstrap'
 import { Link } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
+import { changelog } from '../Reducers';
 
 
 function Login() {
@@ -9,7 +10,7 @@ function Login() {
 const [showSignup, setShowSignup] = useState(true); 
  const [name,setname] = useState("") 
  const [password,setpassword] = useState("") 
-
+ const dispatch = useDispatch()
 
 
  const handle = (e)=>{
@@ -71,7 +72,7 @@ return (
                                <div className='display-btn'>
                              
                                
-                               <Link to="/Pages/Home" className="text-light" style={{textDecoration:"none"}}>
+                               <Link to="/Pages/Home" onClick={()=>dispatch(changelog(true))}  className="text-light" style={{textDecoration:"none"}}>
                                <button type='submit' className='btn login-btn text-light '>
                                    Login
                                   
@@ -118,7 +119,7 @@ return (
                              </div>
                             
                              <div className='display-btn'>
-                             <button className='btn login-btn text-light'>Sign In</button>
+                             <button  className='btn login-btn text-light'>Sign In</button>
                      
                               <span className='my-3'>OR</span>
                              <button className='btn signs-btn'  type='submit' onClick={toggleSignup}>Existing User? Log in</button>

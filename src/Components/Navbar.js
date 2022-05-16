@@ -2,11 +2,13 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { RiShoppingBag3Line } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import "./Navbar.css"
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { BsLayoutSidebarInset } from 'react-icons/bs';
 import { useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai' ;
 import sidebardata  from "./Sidebardata"
+import { changelog } from '../Reducers';
+
 
 function Navbar() {
 
@@ -16,9 +18,15 @@ function Navbar() {
 
 
  const [sidebar,setsidebar] = useState(false)
- 
+
+
   const cartdata =  useSelector(state => state.allproduct.cart)
   //  console.log(cartdata.length)
+  
+ 
+  var logstate = useSelector(state => state.allproduct.log)
+  // console.log(logstate)
+  const dispatch = useDispatch()
 
 
 
@@ -88,16 +96,30 @@ function Navbar() {
                                            </span>
                               </button>
                      </Link>
-         
+          
+
+
       
-                      <Link to="/" >
-                         <button  style={{borderRadius:"17px"}}  className='btn mx-3 btn-outline-dark'>
+                {logstate ?    (<Link to="/" >
+                         <button  style={{borderRadius:"17px"}} onClick={()=>dispatch(changelog(false))}  className='btn mx-3 btn-outline-dark'>
                                  <h6 className='my-1'>
                                     
                                    Logout
                                    </h6>
                            </button>
-                           </Link>
+                           </Link>):
+
+
+                    ( <Link to="/" >
+                         <button  style={{borderRadius:"17px"}}  className='btn mx-3 btn-outline-dark'>
+                                 <h6 className='my-1'>
+                                    
+                                   Login
+                                   </h6>
+                           </button>
+                           </Link>)}
+
+
 
                            
 
