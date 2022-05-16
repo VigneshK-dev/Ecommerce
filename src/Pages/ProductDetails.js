@@ -33,15 +33,15 @@ const displaycart =(id) =>{
     {data.map((ele,index)=> (
       <Row key={index}>
 
-            <Col className='col-5 my-5' > 
+            <Col className='col-lg-5 col-md-4 col-sm-12 col-xs-12 my-5' > 
               
                <div>
-                 <img src={ele.image} className='img-fluid p-5'  alt='product' />
+                 <img src={ele.image} className='img-fluid product-img p-5'  alt='product' />
                </div>
             </Col>
        
         
-            <Col className='col-7 my-5 ' > 
+            <Col className='col-lg-7 col-md-8 col-sm-12 col-sm-12  my-5 ' > 
               <div className='my-4 mx-5'>
                  <h2  className='mx-5 cat'>{ele.category}</h2>
                  <h2 className='mx-5 title'>{ele.title}</h2>

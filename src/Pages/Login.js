@@ -63,7 +63,7 @@ return (
                               <div className='bg-light'> 
                              
                              <form  onSubmit={handle}>
-                               <div className='mx-5 my-4'>
+                               <div className='mx-5 my-4 mt-5'>
                                <input value={name} onChange={(e)=>setname(e.target.value)} type="text" className='form-control input my-4' placeholder='Enter Username' ></input>
                                <input  value={password} onChange={(e)=>setpassword(e.target.value)} type="password"  className='form-control input' placeholder='Enter Password' ></input>
                                </div>
