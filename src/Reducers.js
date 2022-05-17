@@ -15,7 +15,7 @@ export const changelog = (state) => ({type:"change",payload:state})
 
 const initialstate = {
  product :[],
- productdetails:[],
+ productdetails:0,
  cart:[],
  log:false
 }
@@ -35,7 +35,7 @@ export const Reducers =(state=initialstate,action) =>{
        //gets single product to show in product details page
     return {
         ...state,  
-        productdetails:state.product.filter(ele=> (ele.id===action.payload) )
+        productdetails:action.payload
         } 
       case "add" :
       

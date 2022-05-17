@@ -1,15 +1,20 @@
-import { Container,Col,Row } from 'reactstrap'
+import { Container,Col,Row, Spinner } from 'reactstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { AiTwotoneStar} from 'react-icons/ai';
 import { Addtocart } from '../Reducers';
 import { Link } from 'react-router-dom';
 import { toast} from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+
 
 function ProductDetails() {
 
-
-  const data = useSelector(state=>state.allproduct.productdetails)
+  const [data,setdata] = useState([])
+  const [loading,setloading] = useState(false)
+  const Getid = useSelector(state=>state.allproduct.productdetails)
 //  console.log(data)
 const dispatch = useDispatch()
 
@@ -19,15 +24,34 @@ const dispatch = useDispatch()
 const displaycart =(id) =>{
   dispatch(Addtocart(id))
   return toast("Added to Cart" , {type:"info"})
-
+ 
 }
+
+
+const FetchData = async()=>{
+  setloading(true)
+ var detail =  await axios.get(`https://fakestoreapi.com/products/${Getid}`)
+ setloading(false)
+  setdata([detail.data])
+     
+}
+
+useEffect(()=>{
+FetchData()
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+},[])
+
 
 
 
   return (
     <div>
-        
-         <Container fluid className='col-12'>
+
+      {loading ? (<div className ="d-flex text-dark justify-content-center ">
+                <Spinner style={{width: '3rem', height: '3rem'}}/>
+                </div> )
+        :
+         (<Container fluid className='col-12'>
    <ToastContainer position='top-left'  autoClose="1000"/>
 
     {data.map((ele,index)=> (
@@ -75,7 +99,7 @@ const displaycart =(id) =>{
       </Row>
  ))}
 
-         </Container>
+         </Container>)}
 
     </div>
   )
