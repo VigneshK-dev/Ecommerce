@@ -230,6 +230,11 @@ line-height: 1.2;
 }
 
 
+.loginbox{
+  margin-top: 70px ;
+  margin-bottom: 70px;
+}
+
 .input{
   border-top: 0px;
   border-left: 0px; 

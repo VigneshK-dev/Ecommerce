@@ -13,11 +13,12 @@ export const Counterdecrease = (id) => ({type:"decreasecount",payload:id})
 export const changelog = (state) => ({type:"change",payload:state}) 
 
 
+
 const initialstate = {
  product :[],
  productdetails:0,
  cart:[],
- log:false
+ log:false,
 }
 
 //reducer
@@ -80,10 +81,9 @@ export const Reducers =(state=initialstate,action) =>{
               cart:state.cart.map(items =>  (items.id === action.payload) ?  ({...items,qty:items.qty <1 ? items.qty=0 : items.qty-1 }) : (items))   
             } 
       case "change":
-        
       return {
         ...state,
-        log:action.payload
+        log:state.log = action.payload
       }
      
 

@@ -8,26 +8,35 @@ import { useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai' ;
 import sidebardata  from "./Sidebardata"
 import { changelog } from '../Reducers';
+import { useNavigate } from 'react-router-dom';
 
 
 function Navbar() {
 
   
 
- 
-
-
  const [sidebar,setsidebar] = useState(false)
-
 
   const cartdata =  useSelector(state => state.allproduct.cart)
   //  console.log(cartdata.length)
-  
- 
-  var logstate = useSelector(state => state.allproduct.log)
+   const logstate = useSelector(state => state.allproduct.log)
   // console.log(logstate)
-  const dispatch = useDispatch()
 
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+
+  
+  if(logstate){
+  var users = localStorage.getItem("username").toLocaleUpperCase()
+  }
+ 
+const loggingout = ()=>{
+    localStorage.removeItem("username")
+     dispatch(changelog(false))
+    return  navigate("/")
+} 
+ 
 
 
   return (
@@ -77,17 +86,17 @@ function Navbar() {
               
           <div className='user '>
 
-                    <div className='mx-4'>
-                         <h5 className='text-dark my-2'>Hi User</h5>
+                    <div className='mx-4 '>
+                         <h5 className='text-dark my-2' style={{fontWeight:"200"}}>{logstate ?`HI ${users}`: "" }</h5>
                     </div>
            
 
                 <div className='carticon '>
 
-                    <Link to='/Pages/Cart' className='text-decoration-none ' >
-                           <button  style={{borderRadius:"17px"}} className="btn btn-dark cart position-relative" >   
+                {logstate ?  (<Link to='/Pages/Cart' className='text-decoration-none ' >
+                           <button  style={{borderRadius:"8px"}} className="btn btn-dark cart position-relative" >   
                                   <RiShoppingBag3Line  className='icon' />
-                                             <h6 className=' my-1'>
+                                             <h6 className=' my-1' style={{fontWeight:"200"}}>
                                                 Cart
                                               </h6>
                                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
@@ -95,24 +104,24 @@ function Navbar() {
                                                    <span className="visually-hidden">unread messages</span>
                                            </span>
                               </button>
-                     </Link>
+                     </Link>) :("")}
           
 
 
       
-                {logstate ?    (<Link to="/" >
-                         <button  style={{borderRadius:"17px"}} onClick={()=>dispatch(changelog(false))}  className='btn mx-3 btn-outline-dark'>
-                                 <h6 className='my-1'>
+                {logstate ?    (
+                         <button  style={{borderRadius:"8px"}} onClick={loggingout}  className='btn mx-3 btn-outline-dark'>
+                                 <h6 className='my-1' style={{fontWeight:"300"}}>
                                     
                                    Logout
                                    </h6>
                            </button>
-                           </Link>):
+                           ):
 
 
                     ( <Link to="/" >
-                         <button  style={{borderRadius:"17px"}}  className='btn mx-3 btn-outline-dark'>
-                                 <h6 className='my-1'>
+                         <button  style={{borderRadius:"8px"}}  className='btn mx-3 btn-outline-dark'>
+                                 <h6 className='my-1' style={{fontWeight:"300"}}>
                                     
                                    Login
                                    </h6>
