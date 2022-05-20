@@ -11,6 +11,7 @@ export const Counterincrease = (id) => ({type:"increasecount",payload:id})
 export const Counterdecrease = (id) => ({type:"decreasecount",payload:id})
 
 export const changelog = (state) => ({type:"change",payload:state}) 
+export const showlogin = (state) => ({type:"showlogin",payload:state}) 
 
 
 
@@ -19,6 +20,8 @@ const initialstate = {
  productdetails:0,
  cart:[],
  log:false,
+ showlogin:false
+
 }
 
 //reducer
@@ -85,11 +88,13 @@ export const Reducers =(state=initialstate,action) =>{
         ...state,
         log:state.log = action.payload
       }
-     
-
+      case "showlogin":
+      return {
+        ...state,
+        showlogin:state.showlogin = action.payload
+      }
      default:
      return state     
-
  }
 
 } 

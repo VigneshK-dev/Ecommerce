@@ -4,6 +4,9 @@ import { useDispatch} from 'react-redux';
 import { changelog } from '../Reducers';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { showlogin } from '../Reducers';
+import {ImCross} from 'react-icons/im'
+
 
 function Login() {
 
@@ -13,6 +16,7 @@ const [name,setname] = useState("")
 const [password ,setpassword ] =useState("")
 const [mail,setmail] = useState("")
 const dispatch = useDispatch()
+
 
 
 let navigate = useNavigate()
@@ -39,10 +43,10 @@ const handle = (e)=>{
 
        if(res.status === 200){
            dispatch(changelog(true))
+           dispatch(showlogin(false))
            localStorage.setItem("username",name)
            localStorage.setItem("tokens",res.data.idToken)
-
-          return  navigate("/Pages/Home")
+          return  navigate("/")
        }else{
          seterrormsg("Error at Login")
        }
@@ -55,8 +59,9 @@ const handle = (e)=>{
       // console.log(res)
        if(res.status === 200){
            dispatch(changelog(true))
+           dispatch(showlogin(false))
            localStorage.setItem("username",name)
-          return  navigate("/Pages/Home")
+          return  navigate("/")
        }else{
          seterrormsg("Error at Login")
        }
@@ -107,7 +112,9 @@ return (
                              
                               <div className='bg-light'> 
                              
+                              <ImCross onClick={()=>dispatch(showlogin(false))}  className='float-end my-2 mx-2 text-primary'/>
                              <form  onSubmit={handle}>
+        
                                <div className='mx-5 my-4 mt-5'>
                                <input  value={name}  onChange={(e)=>setname(e.target.value)} type="text" className='form-control input my-4' placeholder='Enter Username' ></input>
                                <input value={mail}  onChange={(e)=>setmail(e.target.value)} type="mail" className='form-control input my-4' placeholder='Enter Email'></input>
@@ -129,7 +136,7 @@ return (
                                 <p className='text-primary' style={{cursor:'pointer'}}  onClick={toggleSignup} > New Member? Create an account</p>
                                </div>
                              </form>
-                                
+                          
                               </div>
                              
                              
@@ -157,8 +164,9 @@ return (
                               </div>
                      
                             <div className='bg-light'> 
-                       
+                            <ImCross onClick={()=>dispatch(showlogin(false))} className='float-end my-2 mx-2 text-primary'/>
                          <form onSubmit={handle}>
+                     
                              <div className='mx-5 my-5'>
                              <input  value={name}  onChange={(e)=>setname(e.target.value)} type="text" className='form-control input my-4' placeholder='Enter Username' ></input>
                                <input value={mail} onChange={(e)=>setmail(e.target.value)} type="mail" className='form-control input my-4' placeholder='Enter Email'></input>

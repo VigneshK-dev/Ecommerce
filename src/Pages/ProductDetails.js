@@ -15,6 +15,7 @@ function ProductDetails() {
   const [data,setdata] = useState([])
   const [loading,setloading] = useState(false)
   const Getid = useSelector(state=>state.allproduct.productdetails)
+  const logstate = useSelector(state => state.allproduct.log)
 //  console.log(data)
 const dispatch = useDispatch()
 
@@ -22,9 +23,14 @@ const dispatch = useDispatch()
 
 
 const displaycart =(id) =>{
+
+  if(logstate){
   dispatch(Addtocart(id))
   return toast("Added to Cart" , {type:"info"})
- 
+  }else{
+    return toast("Please Login " ,{type:"error"})
+  }
+
 }
 
 

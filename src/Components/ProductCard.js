@@ -7,21 +7,28 @@ import { useDispatch } from 'react-redux'
 import { singleproduct } from '../Reducers';
 import { Addtocart } from '../Reducers';
 import { toast} from 'react-toastify';
-
+import { useSelector } from 'react-redux';
 
 
 
 function ProductCard({title,price,rating,img,id}) {
 
+
+  const logstate = useSelector(state => state.allproduct.log)
   const dispatch = useDispatch()
 
-
-
   const displaycart =(id) =>{
+
+    if(logstate){
     dispatch(Addtocart(id))
     return toast("Added to Cart" , {type:"info"})
+    }else{
+      return toast("Please Login " ,{type:"error"})
+    }
 
   }
+
+
 
 
 

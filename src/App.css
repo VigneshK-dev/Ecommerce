@@ -4,6 +4,8 @@ body{
   font-family: 'Rubik', sans-serif;
 }
 
+
+
 /*home*/
 .org{
 position: relative;
@@ -217,6 +219,24 @@ line-height: 1.2;
 
 .count{
   padding:0px 13px ;
+}
+
+.missing-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cart-missing-img{
+width: 200px;
+height: 200px;
+}
+
+.miss-btn{
+  padding: 12px 110px;
+  background-color:rgb(249,101,44);
+  font-weight: 500;
 }
 
 

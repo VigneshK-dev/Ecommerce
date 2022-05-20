@@ -11,11 +11,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
+
 const Home = React.lazy(()=> import('./Pages/Home'))
 const Products = React.lazy(()=>import('./Pages/Products'))
 const ProductDetails = React.lazy(()=>import('./Pages/ProductDetails')) 
 const Cart = React.lazy(()=>import('./Pages/Cart')) 
-const Login = React.lazy(()=> import("./Pages/Login"))
+const Modal = React.lazy(()=> import('./Components/Modal'))
 
 function App() {
 
@@ -26,13 +27,13 @@ function App() {
     <div >
 
      <Navbar /> 
+     <Modal/>
  
     <Suspense fallback={ <div className ="d-flex text-dark justify-content-center ">
             <Spinner style={{width: '3rem', height: '3rem'}}/>
              </div>}>
      <Routes>
-     <Route path='/' element={<Login />} />
-     <Route path='/Pages/Home' element={<Home/>} />
+     <Route path='/' element={<Home/>} />
      <Route path='/Pages/Products' element={<Products/>} />
      <Route path='/Pages/ProductDetails' element={<ProductDetails/>} />
      <Route path='/Pages/Cart' element={<Cart/>} />

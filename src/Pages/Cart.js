@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Container,Row,Col, Card, CardBody } from 'reactstrap'
 import Cartitems from '../Components/Cartitems'
-import { useSelector } from 'react-redux'
-
+import { useSelector,useDispatch } from 'react-redux'
+import { showlogin } from '../Reducers';
 
 
 function Cart() {
@@ -13,8 +13,9 @@ function Cart() {
 
 
  const cartdata =  useSelector(state => state.allproduct.cart)
-    
+ const logstate = useSelector(state => state.allproduct.log)  
 //  console.log(cartdata)
+const dispatch = useDispatch()
 
  useEffect(()=>{
    var quant = 0
@@ -32,8 +33,13 @@ function Cart() {
 
  <Container fluid className ='col-11 mt-3'>
   
-     <h3 className='my-3'>MY BAG</h3>
-     <Row>
+     <h3 className='my-3 mx-2'>MY BAG</h3>
+
+     {logstate ? 
+
+ 
+
+     (<Row>
 
            <Col className="col-lg-9 col-md-12 col-sm-12 my-3">
             <Card style={{backgroundColor:"rgb(233, 243, 252)"}}>
@@ -77,7 +83,33 @@ function Cart() {
              <button className='btn my-2 fw-bold px-5 btn-dark'>CHECKOUT</button>
              </div>
            </Col>
-     </Row>
+     </Row>) :
+     
+     
+     (
+   <Container fluid>
+          <Card >
+             
+              <CardBody className='missing-box'>
+               
+               <div className='cart-missing-img mt-5'>
+               <img src='https://rukminim2.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90' className='img-fluid' alt='show login msg'></img>
+               </div> 
+
+               <div className='mb-3'>
+                 <h5 className='text-center' style={{fontWeight:300}}>Missing Cart items?</h5>
+                 <p style={{fontSize:"13px"}}>Login to see the items you added previously</p>
+                 <button onClick={()=>dispatch(showlogin(true))} className='btn miss-btn text-light '>Login</button>
+               </div>
+
+                 
+              </CardBody>
+
+         </Card>
+ </Container>
+     )
+     
+     }
 
  </Container>
  
