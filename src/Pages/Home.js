@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Col, Container, Row } from 'reactstrap'
-import Carousel from '../Components/Carousel'
+import Carousel from '../Components/Carousel/Carousel'
 
 
 

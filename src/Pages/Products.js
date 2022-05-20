@@ -1,5 +1,5 @@
 import { Container, Spinner } from 'reactstrap'
-import ProductCard from '../Components/ProductCard'
+import ProductCard from '../Components/ProductCard/ProductCard'
 import { useEffect,useState } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'

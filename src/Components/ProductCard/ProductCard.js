@@ -4,8 +4,8 @@ import { AiTwotoneStar} from 'react-icons/ai';
 import "./ProductCard.css"
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
-import { singleproduct } from '../Reducers';
-import { Addtocart } from '../Reducers';
+import { singleproduct } from '../../Reducers';
+import { Addtocart } from '../../Reducers';
 import { toast} from 'react-toastify';
 import { useSelector } from 'react-redux';
 
