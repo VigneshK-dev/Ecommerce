@@ -87,30 +87,30 @@ const toggleSignup =() => {
 return (
     <div> 
 
-         <Container className='col-7 loginbox'>
+         <Container className='col-9 loginbox'>
 
 
         {islogin ? (
-                                <div className='login-card '>
+                            <div className='login-card '>
         
-                                <div  style={{backgroundColor:"rgb(46,120,237)"}}>
+                                <div className='login-text' style={{backgroundColor:"rgb(46,120,237)"}}>
                              
-                                    <div className='mx-4 my-5 '>
-                                    <h2 className='text-light'>Login</h2>
-                                 <h6 className='text-light'  style={{opacity:"0.7"}}>
-                                 Get access to your Orders, Wishlist and Recommendations
-                                 </h6>
+                                    <div className='mx-4 my-5 mt-5 '>
+                                      
+                                       <h2 className='text-light'>Login</h2>
+                                            <h6 className='text-light'  style={{opacity:"0.7"}}>
+                                             Get access to your Orders, Wishlist and Recommendations
+                                            </h6>
                                 
+                                     <div>
                              
-                                 <div>
-                             
-                                 </div>
-                                   
-                                    </div>
-                                
                                 </div>
+                                   
+                            </div>
+                                
+                        </div>
                              
-                              <div className='bg-light'> 
+                              <div className='bg-light '> 
                              
                               <ImCross onClick={()=>dispatch(showlogin(false))}  className='float-end my-2 mx-2 text-primary'/>
                              <form  onSubmit={handle}>
@@ -132,8 +132,8 @@ return (
                            
                                    <p className='text-primary text-center mx-4 my-2'>{errormsg}</p>
 
-                                <span className='my-3'>OR</span>
-                                <p className='text-primary' style={{cursor:'pointer'}}  onClick={toggleSignup} > New Member? Create an account</p>
+                                <span className='my-3 or'>OR</span>
+                                <p className='text-primary newtext' style={{cursor:'pointer'}}  onClick={toggleSignup} > New Member? Create an account</p>
                                </div>
                              </form>
                           
@@ -146,10 +146,10 @@ return (
                               <div className='login-card '> 
            
         
-                              <div  style={{backgroundColor:"rgb(46,120,237)"}}>
+                              <div  className=' login-text' style={{backgroundColor:"rgb(46,120,237)"}}>
                      
                                   <div className='mx-4 my-5 '>
-                                  <h3 className='text-light'>Looks like you're new here!</h3>
+                                  <h3 className='text-light '>Looks like you're new here!</h3>
                                <h6 className='text-light'  style={{opacity:"0.8",lineHeight:"1.5"}}>
                                Sign up with your mobile number/Username to get started
                                </h6>
@@ -182,8 +182,8 @@ return (
                   
                        
                                              <p className='text-primary text-center mx-4 my-2'>{errormsg}</p>
-                              <span className='my-3'>OR</span>
-                             <button className='btn signs-btn'   onClick={toggleSignup}>Existing User? Log in</button>
+                              <span className='mb-2 or'>OR</span>
+                             <button className='btn existing mb-5'    onClick={toggleSignup}>Existing User? Log in</button>
                              </div>
                           </form>
                              

@@ -55,9 +55,9 @@ var data = [
     link:"/Pages/Cart" 
   },
    
-  logstate? {id:5,title:"Logout",icon:<BiLogOut onClick={loggingout} />,link:"/"} 
+  logstate? {id:5,title :<span onClick={loggingout}>Logout</span>,icon:<BiLogOut  />,link:"/"} 
 
-  :{ id:5,title:"Login",icon:<BiLogIn onClick={()=>dispatch(showlogin(true))}/>,link:"/"}
+  :{ id:5,title:<span onClick={()=>dispatch(showlogin(true))}>Login</span>,icon:<BiLogIn />,link:"/"}
   
   ]
 
