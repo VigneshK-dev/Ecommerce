@@ -19,7 +19,7 @@ function Carousel() {
         <h1 className='car-title'>FINAL CLEARANCE</h1>
         <p className='car-des'>Take 20% Off 'Save Must-Haves'</p>
          <button style={{fontSize:"30px"}} className='btn btn-dark'>
-         <Link to="/Pages/Products" className="nav-link active text-light fw-bold " >
+         <Link to="/Pages/Products" style={{cursor:'pointer'}} className="nav-link active text-light fw-bold " >
          Shop Now
          </Link>
            </button>
