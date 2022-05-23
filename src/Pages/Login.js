@@ -164,7 +164,7 @@ return (
                               </div>
                      
                             <div className='bg-light'> 
-                            <ImCross onClick={()=>dispatch(showlogin(false))} className='float-end my-2 mx-2 text-primary'/>
+                            <ImCross onClick={()=>dispatch(showlogin(false))} className='float-end my-2 mx-2 text-dark' style={{opacity:"0.6"}}/>
                          <form onSubmit={handle}>
                      
                              <div className='mx-5 my-5'>
