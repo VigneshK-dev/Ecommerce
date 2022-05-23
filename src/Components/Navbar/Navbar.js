@@ -53,7 +53,7 @@ const closebar =()=>{
 
 
 <div className="container-fluid">
-<Link to="/Pages/Home" className="navbar-brand text-primary " >Ecommerce</Link>
+<Link to="/" className="navbar-brand text-primary " >Ecommerce</Link>
 
 <div className="collapse navbar-collapse" id="navbarSupportedContent">
      <div  className="container col-12">
