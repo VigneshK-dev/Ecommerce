@@ -87,13 +87,13 @@ const toggleSignup =() => {
 return (
     <div> 
 
-         <Container className='col-9 loginbox'>
+         <Container className='col-8 loginbox'>
 
 
         {islogin ? (
                             <div className='login-card '>
         
-                                <div className='login-text' style={{backgroundColor:"rgb(46,120,237)"}}>
+                                <div className='login-text-sec' style={{backgroundColor:"rgb(46,120,237)"}}>
                              
                                     <div className='mx-4 my-5 mt-5 '>
                                       
@@ -102,17 +102,19 @@ return (
                                              Get access to your Orders, Wishlist and Recommendations
                                             </h6>
                                 
-                                     <div>
-                             
-                                </div>
-                                   
-                            </div>
+                                     </div>
+
+                                     <div className='mb-5'>
+                                       <img  className='img-fluid ' src='https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png' alt='logo'></img>
+                                     </div>
+
+
                                 
                         </div>
                              
                               <div className='bg-light '> 
                              
-                              <ImCross onClick={()=>dispatch(showlogin(false))}  className='float-end my-2 mx-2 text-primary'/>
+                              <ImCross onClick={()=>dispatch(showlogin(false))}  className='float-end my-2 mx-2 text-dark' style={{opacity:"0.6"}}/>
                              <form  onSubmit={handle}>
         
                                <div className='mx-5 my-4 mt-5'>
@@ -146,20 +148,18 @@ return (
                               <div className='login-card '> 
            
         
-                              <div  className=' login-text' style={{backgroundColor:"rgb(46,120,237)"}}>
+                              <div  className=' login-text-sec' style={{backgroundColor:"rgb(46,120,237)"}}>
                      
                                   <div className='mx-4 my-5 '>
                                   <h3 className='text-light '>Looks like you're new here!</h3>
                                <h6 className='text-light'  style={{opacity:"0.8",lineHeight:"1.5"}}>
                                Sign up with your mobile number/Username to get started
                                </h6>
-                             
-                     
-                               <div>
-                     
-                               </div>
-                                
+      
                                   </div>
+                                  <div className='mb-5'>
+                                       <img  className='img-fluid ' src='https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png' alt='logo'></img>
+                                     </div>
                              
                               </div>
                      
