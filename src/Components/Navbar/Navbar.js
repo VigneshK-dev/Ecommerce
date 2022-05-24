@@ -155,7 +155,7 @@ const closebar =()=>{
 
 </div>
 
-{sidebar ? (<AiFillCloseCircle onClick={()=>setsidebar(!sidebar)} className='sidebarcross ' />) : (<BsLayoutSidebarInset onClick={()=>setsidebar(!sidebar)}  className='sidebaricon'/>)}
+{sidebar ? (<AiFillCloseCircle style={{cursor:"pointer"}} onClick={()=>setsidebar(!sidebar)} className='sidebarcross ' />) : (<BsLayoutSidebarInset style={{cursor:"pointer"}} onClick={()=>setsidebar(!sidebar)}  className='sidebaricon'/>)}
 
 
 </div>
