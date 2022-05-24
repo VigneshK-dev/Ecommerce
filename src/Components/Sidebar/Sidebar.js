@@ -5,9 +5,9 @@ import { AiOutlineHome} from 'react-icons/ai' ;
 import {BiLogOut,BiLogIn} from 'react-icons/bi'
 import { useSelector,useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { showlogin } from '../Reducers';
+import { showlogin } from '../../Reducer/Reducers';
 import { useNavigate } from 'react-router-dom';
-import { changelog } from '../Reducers';
+import { changelog } from '../../Reducer/Reducers';
 
 
 

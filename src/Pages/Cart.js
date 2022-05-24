@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Container,Row,Col, Card, CardBody } from 'reactstrap'
-import Cartitems from '../Components/Cartitems'
+import Cartitems from '../Components/Cartitems/Cartitems';
 import { useSelector,useDispatch } from 'react-redux'
-import { showlogin } from '../Reducers';
+import { showlogin } from '../Reducer/Reducers';
 
 
 function Cart() {

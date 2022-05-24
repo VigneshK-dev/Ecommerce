@@ -3,7 +3,7 @@ import ProductCard from '../Components/ProductCard/ProductCard'
 import { useEffect,useState } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
-import { getproduct} from '../Reducers'
+import { getproduct} from '../Reducer/Reducers'
 import { ToastContainer } from 'react-toastify';
 
 
@@ -42,7 +42,38 @@ const filter = (cat)=>{
 
 
 
+
 function filtercomp(){
+
+  const fildata = [
+    {
+      id:1,
+      title:"Women",
+      image:'https://cdn.shopify.com/s/files/1/0026/2910/7764/files/02_411c8729-8b45-405b-8807-5323f22695cb_2082x.progressive.png.jpg?v=1552393705',
+      filter:"women's clothing"
+    
+  },
+  {
+   id:2,
+   title:"Men",
+   image:'https://cdn.shopify.com/s/files/1/0026/2910/7764/files/03_0e286a8e-d02b-49b4-9b65-9bf8265e7a48_2082x.progressive.png.jpg?v=1552393723',
+   filter:"men's clothing"
+  },
+  {
+   id:3,
+   title:"Electronics",
+   image:'https://images.unsplash.com/photo-1636612680772-59425356da80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
+   filter:"electronics"
+  },
+  {
+   id:4,
+   title:"Jewelery",
+   image:'https://images.unsplash.com/photo-1586104195538-050b9f74f58e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+   filter:"jewelery"
+  }
+ 
+ ]
+
 
   
   
@@ -56,46 +87,16 @@ function filtercomp(){
 
      <div className ='display-menu mt-3'>
           
-              <div className ='orgs'  onClick={()=>filter("women's clothing")}  >
-                  <img src='https://cdn.shopify.com/s/files/1/0026/2910/7764/files/02_411c8729-8b45-405b-8807-5323f22695cb_2082x.progressive.png.jpg?v=1552393705' className ='imgs img-fluid' alt='women'/>
+             {fildata.map((items,index) =>(
+             <div key={index} className ='orgs'  onClick={()=>filter(items.filter)}  >
+                  <img src={items.image} className ='imgs img-fluid' alt='women'/>
                      <div className ='layers'>
-                         <h5 className ='text-center fw-bold'>Women</h5>
+                         <h5 className ='text-center fw-bold mx-2'>{items.title}</h5>
                       </div>
-                 </div>
-             
-  
-  
-           
-             <div className ='orgs ' onClick={()=>filter("men's clothing")}  >
-             <img src='https://cdn.shopify.com/s/files/1/0026/2910/7764/files/03_0e286a8e-d02b-49b4-9b65-9bf8265e7a48_2082x.progressive.png.jpg?v=1552393723' className ='imgs img-fluid' alt='men'/>
-                     <div className ='layers'>
-                         <h5 className ='text-center fw-bold'>Men</h5>
-                      </div>
-                 </div>
-  
-   
-  
-      
-               
-
-              <div className ='orgs'onClick={()=>filter("electronics")} >
-                  <img src='https://images.unsplash.com/photo-1636612680772-59425356da80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80' className ='imgs img-fluid' alt='ele'/>
-                     <div className ='layers'>
-                         <h5 className ='text-center fw-bold'>Electronics</h5>
-                      </div>
-                 </div>
-         
-  
-  
-         
-             <div className ='orgs'  onClick={()=>filter("jewelery")} >
-             <img src='https://images.unsplash.com/photo-1586104195538-050b9f74f58e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' className ='imgs img-fluid' alt='jew'/>
-                     <div className ='layers'>
-                         <h5 className ='text-center fw-bold'>jewelery</h5>
-                      </div>
-                 </div>
-  
-         
+                 </div>))
+                 
+                 }
+                       
   
            </div>
   

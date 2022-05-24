@@ -55,8 +55,10 @@ align-items: center;
   color: black;
 }
 
+
 .nav-link:hover{
   color: rgb(0, 81, 255);
+   
 }
 
 

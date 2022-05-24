@@ -55,7 +55,7 @@ top: 0;
 .orgs{
   position: relative;
   overflow: hidden;
-
+ cursor: pointer;
   }
   
   .layers{
@@ -66,9 +66,13 @@ top: 0;
   top: 0;
   }
   
-  .layers:hover{
-     background-color: rgba(145, 65, 65, 0.63);
-  }
+.orgs img{
+  transition: 0.3s;
+}
+
+.orgs:hover img{
+   transform: scale(1.05);
+}
   
   .layers h5{
     position: absolute;
@@ -83,6 +87,8 @@ top: 0;
   
   .layers:hover h5{
     transform: translateY(-300%);
+    background-color: rgb(45, 98, 242);
+    color: white;
   }
 
 .display-menu{

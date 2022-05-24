@@ -6,10 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BsLayoutSidebarInset } from 'react-icons/bs';
 import { useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai' ;
-import { changelog } from '../../Reducers';
+import { changelog } from '../../Reducer/Reducers';
 import { useNavigate } from 'react-router-dom';
-import { showlogin } from '../../Reducers';
-import Sidebar from '.././Sidebar';
+import { showlogin } from '../../Reducer/Reducers';
+import Sidebar from '../Sidebar/Sidebar';
 
 function Navbar() {
 

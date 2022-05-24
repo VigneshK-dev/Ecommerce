@@ -1,7 +1,7 @@
 import { Container,Col,Row, Spinner } from 'reactstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { AiTwotoneStar} from 'react-icons/ai';
-import { Addtocart } from '../Reducers';
+import { Addtocart } from '../Reducer/Reducers';
 import { Link } from 'react-router-dom';
 import { toast} from 'react-toastify';
 import { ToastContainer } from 'react-toastify';

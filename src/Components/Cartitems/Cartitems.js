@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardBody,Card,Col, Row, Container} from 'reactstrap'
 import { useDispatch } from 'react-redux'
-import { Counterdecrease, Counterincrease, Delcart ,singleproduct } from '../Reducers'
+import { Counterdecrease, Counterincrease, Delcart ,singleproduct } from '../../Reducer/Reducers'
 import { Link } from 'react-router-dom'
 
 

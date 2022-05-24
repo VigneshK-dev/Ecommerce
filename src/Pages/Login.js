@@ -1,10 +1,10 @@
 import React, {  useState } from 'react'
 import { Container} from 'reactstrap'
 import { useDispatch} from 'react-redux';
-import { changelog } from '../Reducers';
+import { changelog } from '../Reducer/Reducers';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { showlogin } from '../Reducers';
+import { showlogin } from '../Reducer/Reducers';
 import {ImCross} from 'react-icons/im'
 
 

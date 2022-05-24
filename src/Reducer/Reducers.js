@@ -86,12 +86,12 @@ export const Reducers =(state=initialstate,action) =>{
       case "change":
       return {
         ...state,
-        log:state.log = action.payload
+        log:action.payload
       }
       case "showlogin":
       return {
         ...state,
-        showlogin:state.showlogin = action.payload
+        showlogin: action.payload
       }
      default:
      return state     
