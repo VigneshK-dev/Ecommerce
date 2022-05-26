@@ -13,7 +13,7 @@ import Sidebar from '../Sidebar/Sidebar';
 
 function Navbar() {
 
-  
+
 
  const [sidebar,setsidebar] = useState(false)
 

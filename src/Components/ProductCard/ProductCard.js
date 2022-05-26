@@ -44,16 +44,17 @@ function ProductCard({title,price,rating,img,id}) {
 
 
 
- <img src={img} style={{width: "100%",height:"50%"}} className="card-img-top px-4 py-4 img-fluid" alt="books"/>
-
-
-
  <CardBody >
 
 
-   <div className='content'>
+ <Link className='link-style text-light'  onClick={()=>dispatch(singleproduct(id))} to={`/Pages/ProductDetails`}> 
+<img src={img} style={{width: "100%",height:"50%"}} className="card-img-top px-4 py-4 img-fluid" alt="books"/>
+</Link>
+
+
+   <div >
    <Link className='link-style text-light'  onClick={()=>dispatch(singleproduct(id))} to={`/Pages/ProductDetails`}> 
-   <h6 className="card-title header text-dark fw-bold">{title}</h6>
+   <h6 className="card-title header text-dark fw-bold">{`${title.substring(0,50)}...`}</h6>
       <p style={{fontSize:"13px"}} className='text-light rate  px-1'>{rating}
        <span><AiTwotoneStar/></span>
       </p>
