@@ -2,6 +2,15 @@
 
 
 
+//using redux-thunk
+
+  //action 
+// export const fetchproducts = () => async (dispatch) => {
+//     var response =  await axios.get("https://fakestoreapi.com/products")
+//     dispatch({type:"fetchdata",payload:response.data})
+//   }
+
+
 export const getproduct = (data)=>({type:"get",payload:data})
 export const singleproduct = (id) =>({type:"single",payload:id})
 export const Addtocart = (id) => ({type:"add",payload:id})
@@ -21,15 +30,22 @@ const initialstate = {
  cart:[],
  log:false,
  showlogin:false
-
 }
 
 //reducer
 
 export const Reducers =(state=initialstate,action) =>{
  switch(action.type){
+
+  // using redux - thunk 
+
+  //  case "fetchdata":
+  //    return{
+  //         ...state,
+  //         product:action.payload
+  //    }
+
       case "get":
-         
        //gets all products 
      return {
          ...state,
@@ -56,7 +72,7 @@ export const Reducers =(state=initialstate,action) =>{
              }   
          }else{
              //if it is added to the cart of the first time(doesn't exist)  the add qty object to the products object
-            var data = state.product.find(ele => (ele.id===action.payload))
+            var data = state.product.find(ele => (ele.id === action.payload))
             return {
                 ...state,
                 cart:[...state.cart,{...data,qty:1}]
@@ -67,7 +83,6 @@ export const Reducers =(state=initialstate,action) =>{
            return{
             ...state,
             cart:state.cart.filter(ele => (ele.id !== action.payload))
-
            }  
        
         case "increasecount" :

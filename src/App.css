@@ -275,8 +275,8 @@ height: 200px;
 }
 
 .login-btn {
-  padding: 12px 110px;
-  background-color:rgb(249,101,44);
+padding: 12px 110px;
+background-color:rgb(249,101,44);
 font-weight: 500;
 }
 
@@ -285,7 +285,6 @@ font-weight: 500;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-
 }
 
 

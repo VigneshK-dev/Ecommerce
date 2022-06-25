@@ -17,9 +17,9 @@ const dispatch = useDispatch()
 
  
   const Fetchdata = async ()=>{
-    setloading(true)
-    var productdata  =  await axios.get("https://fakestoreapi.com/products")
-    setloading(false)
+     setloading(true)
+     var productdata  =  await axios.get("https://fakestoreapi.com/products")
+     setloading(false)
      setdata(productdata.data)
      setfiltered(productdata.data)
     dispatch(getproduct(productdata.data))

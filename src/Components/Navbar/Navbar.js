@@ -34,7 +34,7 @@ function Navbar() {
 const loggingout = ()=>{
     localStorage.removeItem("username")
      dispatch(changelog(false))
-    return  navigate("/")
+     return  navigate("/")
 } 
 
 const closebar =()=>{
