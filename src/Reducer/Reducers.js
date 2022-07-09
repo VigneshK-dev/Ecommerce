@@ -5,10 +5,12 @@
 //using redux-thunk
 
   //action 
-// export const fetchproducts = () => async (dispatch) => {
+// export const fetchproducts = () =>{
+ //   return async (dispatch) => {
 //     var response =  await axios.get("https://fakestoreapi.com/products")
 //     dispatch({type:"fetchdata",payload:response.data})
 //   }
+// }
 
 
 export const getproduct = (data)=>({type:"get",payload:data})

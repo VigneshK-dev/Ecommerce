@@ -1,6 +1,6 @@
 import {CgProductHunt} from 'react-icons/cg'
 import {FcAbout} from 'react-icons/fc'
-import {FiShoppingCart} from 'react-icons/fi'
+import {AiOutlineUserAdd} from 'react-icons/ai'
 import { AiOutlineHome} from 'react-icons/ai' ;
 import {BiLogOut,BiLogIn} from 'react-icons/bi'
 import { useSelector,useDispatch } from 'react-redux';
@@ -50,8 +50,8 @@ var data = [
   
   {
     id:4,
-    title:"Cart",
-    icon:<FiShoppingCart/>,
+    title:"friends",
+    icon:<AiOutlineUserAdd/>,
     link:"/Pages/Cart" 
   },
    
